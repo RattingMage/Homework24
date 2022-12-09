@@ -53,7 +53,7 @@ CMD_TO_FUNCTION = {
 }
 
 
-def build_query(cmd, param, data=None):
+def build_query(cmd: str, param: str, data: list[str] = None) -> list[str]:
     if not data:
         with open(FILE_NAME) as file:
             data = list(map(lambda row: row.strip(), file))
